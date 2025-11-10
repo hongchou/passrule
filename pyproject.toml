@@ -25,8 +25,8 @@ classifiers = [
 requires-python = ">=3.8"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/passrule"
-Repository = "https://github.com/yourusername/passrule"
+Homepage = "https://github.com/hongchou/passrule"
+Repository = "https://github.com/hongchou/passrule"
 
 [tool.uv]
 dev-dependencies = [
