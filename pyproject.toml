@@ -9,7 +9,7 @@ description = "可配置的密码校验库"
 readme = "README.md"
 license = "MIT"
 authors = [
-    {name = "Your Name", email = "your.email@example.com"},
+    {name = "Your Name", email = "chouhong2021@163.com"},
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
