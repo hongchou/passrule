@@ -15,6 +15,7 @@ class ValidationRule:
     require_lowercase: bool = True
     require_special_chars: bool = True
     special_chars: str = "!@#$%^&*()_+-=[]{}|;:,.<>?"
+    exclude_chars: str = ""  # 排除的字符
 
 
 class PasswordValidator:

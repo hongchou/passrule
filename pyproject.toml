@@ -4,12 +4,12 @@ build-backend = "hatchling.build"
 
 [project]
 name = "passrule"
-version = "0.1.1"
+version = "0.1.2"
 description = "可配置的密码校验库"
 readme = "README.md"
 license = "MIT"
 authors = [
-    {name = "Your Name", email = "chouhong2021@163.com"},
+    {name = "chouhong2021@163.com", email = "chouhong2021@163.com"},
 ]
 classifiers = [
     "Development Status :: 4 - Beta",

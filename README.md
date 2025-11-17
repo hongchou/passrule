@@ -42,6 +42,35 @@ validator = PasswordValidator(rule)
 is_valid, errors = validator.validate("password123!")
 ```
 
+### 密码生成
+
+```python
+from passrule import PasswordGenerator, ValidationRule
+
+# 使用默认规则生成密码
+generator = PasswordGenerator()
+password = generator.generate()  # 生成8位密码
+password = generator.generate(12)  # 生成12位密码
+
+# 使用自定义规则生成密码
+rule = ValidationRule(
+    min_length=10,
+    require_uppercase=True,
+    require_digits=True,
+    require_special_chars=False
+)
+generator = PasswordGenerator(rule)
+password = generator.generate()
+
+# 排除容易混淆的字符
+rule = ValidationRule(
+    min_length=12,
+    exclude_chars="0Oo1Il"  # 排除0, O, o, 1, I, l
+)
+generator = PasswordGenerator(rule)
+password = generator.generate()
+```
+
 ## 校验规则
 
 - `min_length`: 最小长度（默认8）
@@ -51,6 +80,7 @@ is_valid, errors = validator.validate("password123!")
 - `require_lowercase`: 是否需要小写字母（默认True）
 - `require_special_chars`: 是否需要特殊字符（默认True）
 - `special_chars`: 允许的特殊字符（默认"!@#$%^&*()_+-=[]{}|;:,.<>?"）
+- `exclude_chars`: 排除的字符（默认为空）
 
 ## 许可证
 
